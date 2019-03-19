@@ -39,13 +39,13 @@ public class PlayerController : MonoBehaviour {
      //   }
         //float Alfa;
         float moveX =
-               (Input.GetAxis("Horizontal") + joystick.Horizontal) * Mathf.Cos(Mathf.Deg2Rad * tr.rotation.eulerAngles.y)
+               (Input.GetAxis("Horizontal") /*+ joystick.Horizontal*/) * Mathf.Cos(Mathf.Deg2Rad * tr.rotation.eulerAngles.y)
               + Input.GetAxis("Vertical") * Mathf.Sin(Mathf.Deg2Rad * tr.rotation.eulerAngles.y);
         moveX = mv_speed * moveX * dif;
 
         // if(moveHorizontal == 0) moveHorizontal =  
         float moveZ = 
-              (-Input.GetAxis("Horizontal") + joystick.Horizontal) * Mathf.Sin(Mathf.Deg2Rad * tr.rotation.eulerAngles.y)
+              (-Input.GetAxis("Horizontal") /*+ joystick.Horizontal*/) * Mathf.Sin(Mathf.Deg2Rad * tr.rotation.eulerAngles.y)
               + Input.GetAxis("Vertical") * Mathf.Cos(Mathf.Deg2Rad * tr.rotation.eulerAngles.y);
         moveZ = mv_speed * moveZ * dif;
         // = Input.GetAxis("Horizontal") * mv_speed * Mathf.Sin(tr.rotation.y * Mathf.PI) + Input.GetAxis("Vertical") * mv_speed * Mathf.Cos(tr.rotation.y * Mathf.PI);
